@@ -9,6 +9,17 @@ for i in range(1,50):
     else:
         print(i)
 #2
+prime_num=int(input("Enter any number to check prime"))
+Prime=True
+if prime_num<=1:
+    print("Not a prime")
+    Prime=False
+elif prime_num>1:
+    for i in range(2,prime_num):
+        if prime_num%i==0:
+            Prime=False
+            break
+print(Prime)
 #3
 score=int(input("What is your score?"))
 if score>=90 and score<=100:

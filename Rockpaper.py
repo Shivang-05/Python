@@ -13,6 +13,10 @@ while flag:
         print(f"You won {user_score} times")
         print(f"Computer won {computer_score} times")
         print(f"There were {no_of_draws} draws")
+        with open('score.txt','w') as score_file:
+            score_file.write(f"You won {user_score} times\n")
+            score_file.write(f"Computer won {computer_score} times\n")
+            score_file.write(f"There were {no_of_draws} draws")
         break
     if user_choice not in ["r", "p", "s"]:
         print("Enter only from options given!")
